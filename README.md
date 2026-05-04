@@ -80,6 +80,21 @@ python app.py
 
 The service runs at `http://localhost:5000`.
 
+### 4. Deploy on Render
+
+Render can host this app as a web service. Add a `Procfile` with:
+
+```text
+web: gunicorn app:app --bind 0.0.0.0:$PORT
+```
+
+Then connect your GitHub repo to Render and use:
+
+- Build command: `pip install -r requirements.txt`
+- Start command: `gunicorn app:app --bind 0.0.0.0:$PORT`
+
+Make sure the saved model file `model/plant_model.h5` is available on Render, either by storing it in the repo with Git LFS or downloading it from storage during startup.
+
 ## API Endpoints
 
 ### GET /health

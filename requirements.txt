@@ -4,4 +4,5 @@ opencv-python
 pillow
 matplotlib
 flask
+gunicorn
 flask-cors
