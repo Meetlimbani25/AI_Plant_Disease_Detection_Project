@@ -1,0 +1,16 @@
+# Local Python environment
+venv/
+__pycache__/
+*.pyc
+
+# Large generated/local data
+Dataset/
+uploads/
+model/
+*.h5
+*.keras
+*.zip
+
+# Local secrets/config
+kaggle.json
+.env
