@@ -82,28 +82,6 @@ The service runs at `http://localhost:5000`.
 
 ### 4. Deploy on Render
 
-Render defaults to Python 3.14, but TensorFlow does not support that version. This project now includes `runtime.txt` with:
-
-```text
-python-3.11.16
-```
-
-That forces Render to use Python 3.11 and allows TensorFlow to install correctly.
-
-If you are using Render, ensure the service build command remains:
-
-```bash
-pip install -r requirements.txt
-```
-
-And the start command remains:
-
-```bash
-gunicorn app:app --bind 0.0.0.0:$PORT
-```
-
-## API Endpoints
-
 Render can host this app as a web service. Add a `Procfile` with:
 
 ```text
