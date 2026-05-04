@@ -93,6 +93,12 @@ Then connect your GitHub repo to Render and use:
 - Build command: `pip install -r requirements.txt`
 - Start command: `gunicorn app:app --bind 0.0.0.0:$PORT`
 
+Render uses the `.python-version` file to select the Python runtime. This repo now contains:
+
+```text
+3.11.16
+```
+
 Make sure the saved model file `model/plant_model.h5` is available on Render, either by storing it in the repo with Git LFS or downloading it from storage during startup.
 
 ## API Endpoints
